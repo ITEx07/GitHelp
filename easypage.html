@@ -19,13 +19,69 @@ display:inline-block;
   	  <li><a href="write-readme.html">次へ</a></li>
     </ul>
   </nav>
-  <h1></h1>
+  <h1>簡単な使い方</h1>
+  <h3>GitHub アカウントの作り方</h3>
   <ul>
   
-    <li><a href=""></a></li>
-    <li></li>
-    
+    <li><a href="https://github.com">github</a>にアクセス</li>
+    <li>username, mailaddress, password, を入力して sign up for Githubをクリック</li>
+    <li>確認メール内のリンクをクリック</li>    
   </ul>
+  <h3>ssh鍵の作り方</h3>
+  <ul>
+    <li>GitBashひらく</li>
+    <li><p>鍵のペアの生成</p>
+    <p><code>$ssh-keygen -t rsa -C "自分のメールアドレス"</code></p></li>
+    <li>公開鍵の内容をコピーする</li>
+    <li>GitHubのAccount Settingsのページを開く</li>
+    <li>左側のメニューからSSH Keysのページを開きます</li>
+    <li>Add SSH Key のボタンをクリック</li>
+    <li>Titleはおまかせ</li>
+    <li>Keyにコピーしたものを貼り付け</li>
+    <li>Add Key ボタンをクリック</li>
+  </ul>
+  <h3>リポジトリの作り方</h3>
+  <ul>
+  <li>ユーザーのトップページのNew　Repositoryのボタンをクリック</li>
+  <li>Repository nameを入力</li>
+  <li>Create　repositoryをクリック</li>
+  </ul>
+  <h3>ローカルへの落とし方</h3>
+<ul>
+  <li>Git Bashで<code>git clone [リポジトリのurl]</code>を実行</li>
+  </ul>
+  <h3>コミットのやり方</h3>
+  <ul>
+  <li>git add [file名]　でインデックスに追加する</li>
+  <li>git commit -m "メッセージ" でコミット</li>
+  </ul>
+  <h3>pushの仕方</h3>
+  <ul>
+  <li>git push -u origin masterを実行</li>
+  </ul>
+  <h3>ブランチモデル</h3>
+  <ul>
+  <li>git flow<br>
+  <p><b>masterブランチ</b></p>
+  <p>リリース用のブランチ</p>
+  <p><b>developブランチ</b></p>
+  <p>開発用ブランチ。リリースできると判断されたらmasterへマージされる</p>
+  <p><b>featureブランチ</b></p>
+  <p>機能追加用ブランチ。developから分岐して、developへマージする</p>
+  <p><b>hotfixブランチ</b></p>
+  <p>バグ修正などに使われる。masterから分岐して、masterとdevelopへマージする</p>
+  <p><b>releaseブランチ</b></p>
+  <p>リリース準備用のブランチ</p></li>
+  <li>girhub flow<br>
+  <p>git flow を簡単にしたもの</p>
+  <p>developブランチが無くなり、プルリクエストが用いられる。</p>
+  <p>masterから分岐して開発する</p>
+  <p>完了したらローカルでコミットし、リモートにもプッシュする</p>
+  <p>アドバイスやレビューをしてほしい時にはプルリクエストを出す</p>
+  <p>必要に応じて修正、コミット、プッシュする</p>
+  <p>okが出たらmasterにマージする</p></li>
+  </ul>
+  
 </body>
 
 </html>
