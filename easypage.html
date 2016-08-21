@@ -20,12 +20,46 @@ display:inline-block;
     </ul>
   </nav>
   <h1></h1>
+  <h3>GitHub アカウントの作り方</h3>
   <ul>
   
     <li><a href=""></a></li>
     <li></li>
     
   </ul>
+  <h3>ssh鍵の作り方</h3>
+  <ul>
+    <li>GitBashひらく</li>
+    <li><p>鍵のペアの生成</p>
+    <p><code>$ssh-keygen -t rsa -C "自分のメールアドレス"</code></p></li>
+    <li>公開鍵の内容をコピーする</li>
+    <li>GitHubのAccount Settingsのページを開く</li>
+    <li>左側のメニューからSSH Keysのページを開きます</li>
+    <li>Add SSH Key のボタンをクリック</li>
+    <li>Titleはおまかせ</li>
+    <li>Keyにコピーしたものを貼り付け</li>
+    <li>Add Key ボタンをクリック</li>
+  </ul>
+  <h3>リポジトリの作り方</h3>
+  <ul>
+  <li>ユーザーのトップページのNew　Repositoryのボタンをクリック</li>
+  <li>Repository nameを入力</li>
+  <li>Create　repositoryをクリック</li>
+  </ul>
+  <h3>ローカルへの落とし方</h3>
+<ul>
+  <li>Git Bashで<code>git clone [リポジトリのurl]</code>を実行</li>
+  </ul>
+  <h3>コミットのやり方</h3>
+  <ul>
+  <li>git add [file名]　でインデックスに追加する</li>
+  <li>git commit -m "メッセージ" でコミット</li>
+  </ul>
+  <h3>pushの仕方</h3>
+  <ul>
+  <li>git push -u origin masterを実行</li>
+  </ul>
+  
 </body>
 
 </html>
